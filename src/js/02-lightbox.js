@@ -20,18 +20,9 @@ function createMarkupItems(galleryItems) {
 const markup = createMarkupItems(galleryItems);
 galleryElem.insertAdjacentHTML("beforeend", markup);
 
-galleryElem.addEventListener("click", handlerClickPicture);
-
-function handlerClickPicture(event) {
-  event.preventDefault();
-
-  if (event.target.nodeName !== "IMG") {
-    return;
-  }
-
   const lightbox = new SimpleLightbox(".gallery a", {
     captionsData: "alt",
     captionPosition: "bottom",
     captionDelay: 250,
   });
-}
+
